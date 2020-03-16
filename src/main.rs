@@ -4,17 +4,24 @@ use image::GenericImageView;
 use image::GenericImage;
 use image::DynamicImage;
 use image::Rgba;
+use std::io;
 
 fn main() {
-    let input_image = "/home/toshinomi/worksapce/rust/RustFirstProduct/image/input.jpg";
-    let output_image = "/home/toshinomi/worksapce/rust/RustFirstProduct/image/output.jpg";
+    println!("image directory : ");
+    let mut directory = String::new();
+    io::stdin().read_line(&mut directory).expect("Failed to read line");
+    directory.pop();
+    let input_image = directory.clone() + "/input.jpg";
+    let output_image = directory.clone() + "/output.jpg";
     let mut img: DynamicImage = image::open(input_image).unwrap();
     
     println!("Image Processing Start!");
 
     color_reversal(&mut img);
 
-    img.save(output_image).unwrap();
+    img.save(&output_image).unwrap();
+
+    println!("Output Image : {}", output_image);
 
     println!("Image Processing End!");
 }
