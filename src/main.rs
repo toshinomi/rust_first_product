@@ -31,7 +31,7 @@ fn color_reversal(img: &mut DynamicImage) {
 
     for y in 0..height {
         for x in 0..width {
-            let mut pixel: Rgba<u8> = img.get_pixel(x, y);
+            let pixel: Rgba<u8> = img.get_pixel(x, y);
             let red = pixel[0];
             let green = pixel[1];
             let blue = pixel[2];
