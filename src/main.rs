@@ -11,8 +11,8 @@ fn main() {
     let mut directory = String::new();
     io::stdin().read_line(&mut directory).expect("Failed to read line");
     directory.pop();
-    let input_image = directory.clone() + "/input.jpg";
-    let output_image = directory.clone() + "/output.jpg";
+    let input_image = directory.to_string() + "/input.jpg";
+    let output_image = directory.to_string() + "/output.jpg";
     let mut img: DynamicImage = image::open(input_image).unwrap();
     
     println!("Image Processing Start!");
