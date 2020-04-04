@@ -1,5 +1,5 @@
 [package]
-name = "RustFirstProduct"
+name = "rust_rirst_product"
 version = "0.1.0"
 authors = ["toshinomi <tatsuya.oshinomi.0828@gmail.com>"]
 edition = "2018"
