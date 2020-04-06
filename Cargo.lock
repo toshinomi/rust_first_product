@@ -300,7 +300,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "rust_rirst_product"
+name = "rust_first_product"
 version = "0.1.0"
 dependencies = [
  "image",

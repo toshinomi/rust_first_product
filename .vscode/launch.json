@@ -7,15 +7,15 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'RustFirstProduct'",
+            "name": "Debug executable 'rust_first_product'",
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=RustFirstProduct",
-                    "--package=RustFirstProduct"
+                    "--bin=rust_first_product",
+                    "--package=rust_first_product"
                 ],
                 "filter": {
-                    "name": "RustFirstProduct",
+                    "name": "rust_first_product",
                     "kind": "bin"
                 }
             },
@@ -25,13 +25,13 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in executable 'RustFirstProduct'",
+            "name": "Debug unit tests in executable 'rust_first_product'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
-                    "--bin=RustFirstProduct",
-                    "--package=RustFirstProduct"
+                    "--bin=rust_first_product",
+                    "--package=rust_first_product"
                 ],
                 "filter": {
                     "name": "RustFirstProduct",
