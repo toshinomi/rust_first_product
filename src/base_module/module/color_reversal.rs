@@ -2,23 +2,20 @@ use image::GenericImageView;
 use image::GenericImage;
 use image::DynamicImage;
 use image::Rgba;
-use crate::module::common::Pixel;
-use crate::module::common::PixelKind;
+use crate::base_module::module::common::Pixel;
+use crate::base_module::module::common::PixelKind;
+use crate::base_module::base_image_proc::GoImageProc;
 
-pub struct ImageManager {}
+pub struct ColorReversal {}
 
-impl ImageManager {
-    pub fn new() -> ImageManager {
-        ImageManager {}
+impl ColorReversal {
+    pub fn new() -> ColorReversal {
+        ColorReversal {}
     }
 }
 
-pub trait GoImageProc {
-    fn go_image_proc(&mut self, img: &mut DynamicImage) -> &mut ImageManager;
-}
-
-impl GoImageProc for ImageManager {
-    fn go_image_proc(&mut self, img: &mut DynamicImage) -> &mut ImageManager {
+impl GoImageProc for ColorReversal {
+    fn go_image_proc(&mut self, img: &mut DynamicImage) {
         let (width, height) = img.dimensions();
 
         for y in 0..height {
@@ -41,6 +38,5 @@ impl GoImageProc for ImageManager {
                 img.put_pixel(x, y, pixel);
             }
         }
-        self
     }
 }

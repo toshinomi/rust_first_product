@@ -2,8 +2,8 @@ extern crate image;
 
 use image::DynamicImage;
 use std::io;
-use rust_first_product::module::color_reversal;
-use rust_first_product::module::color_reversal::GoImageProc;
+use rust_first_product::base_module::module::color_reversal;
+use rust_first_product::base_module::base_image_proc::GoImageProc;
 
 fn main() {
     println!("image directory : ");
@@ -16,9 +16,8 @@ fn main() {
     
     println!("Image Processing Start!");
 
-    color_reversal::ImageManager::new().go_image_proc(&mut img);
-    //let mut color_reversal = color_reversal::ImageManager::new();
-    //color_reversal.go_image_proc(&mut img);
+    let mut color_reversal = color_reversal::ColorReversal::new();
+    color_reversal.go_image_proc(&mut img);
 
     img.save(&output_image).unwrap();
 
