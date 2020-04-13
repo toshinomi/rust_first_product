@@ -2,8 +2,8 @@ use image::GenericImageView;
 use image::GenericImage;
 use image::DynamicImage;
 use image::Rgba;
-use crate::base_module::module::common::Pixel;
-use crate::base_module::module::common::PixelKind;
+use crate::base_module::common::Pixel;
+use crate::base_module::common::PixelKind;
 use crate::base_module::base_image_proc::GoImageProc;
 
 pub struct ColorReversal {}
