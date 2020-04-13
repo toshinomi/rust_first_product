@@ -52,7 +52,7 @@ impl PixelSumDataToU8 for i64 {
         if self > 255i64 {
             cnv_value = 255u8;
         }
-        else if self < 0 {
+        else if self < 0i64 {
             cnv_value = 0;
         }
         else {
