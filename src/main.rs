@@ -12,14 +12,14 @@ fn main() {
     directory.pop();
     let input_image = directory.to_string() + "/input.jpg";
     let output_image = directory.to_string() + "/output.jpg";
-    let mut img: DynamicImage = image::open(input_image).unwrap();
+    let mut image: DynamicImage = image::open(input_image).unwrap();
     
     println!("Image Processing Start!");
 
     let mut color_reversal = color_reversal::ColorReversal::new();
-    color_reversal.go_image_proc(&mut img);
+    color_reversal.go_image_processing(&mut image);
 
-    img.save(&output_image).unwrap();
+    image.save(&output_image).unwrap();
 
     println!("Output Image : {}", output_image);
 

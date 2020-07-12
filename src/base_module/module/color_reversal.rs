@@ -15,12 +15,12 @@ impl ColorReversal {
 }
 
 impl GoImageProc for ColorReversal {
-    fn go_image_proc(&mut self, img: &mut DynamicImage) {
-        let (width, height) = img.dimensions();
+    fn go_image_processing(&mut self, image: &mut DynamicImage) {
+        let (width, height) = image.dimensions();
 
         for y in 0..height {
             for x in 0..width {
-                let pixel: Rgba<u8> = img.get_pixel(x, y);
+                let pixel: Rgba<u8> = image.get_pixel(x, y);
                 let mut pixel_data: Pixel<u8> = Pixel::new(
                     pixel[PixelKind::Red as usize],
                     pixel[PixelKind::Green as usize], 
@@ -35,7 +35,7 @@ impl GoImageProc for ColorReversal {
                 let new_color = [255 - red, 255 - green, 255 - blue, alpha];
                 let pixel: Rgba<u8> = Rgba(new_color);
 
-                img.put_pixel(x, y, pixel);
+                image.put_pixel(x, y, pixel);
             }
         }
     }
