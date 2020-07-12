@@ -4,7 +4,7 @@ use image::DynamicImage;
 use image::Rgba;
 use crate::base_module::common::Pixel;
 use crate::base_module::common::PixelKind;
-use crate::base_module::base_image_proc::GoImageProc;
+use crate::base_module::base_image_proc::GoImageProcessing;
 
 pub struct ColorReversal {}
 
@@ -14,7 +14,7 @@ impl ColorReversal {
     }
 }
 
-impl GoImageProc for ColorReversal {
+impl GoImageProcessing for ColorReversal {
     fn go_image_processing(&mut self, image: &mut DynamicImage) {
         let (width, height) = image.dimensions();
 

@@ -3,7 +3,7 @@ extern crate image;
 use image::DynamicImage;
 use std::io;
 use rust_first_product::base_module::module::color_reversal;
-use rust_first_product::base_module::base_image_proc::GoImageProc;
+use rust_first_product::base_module::base_image_proc::GoImageProcessing;
 
 fn main() {
     println!("image directory : ");
