@@ -7,37 +7,8 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'rust_first_product'",
-            "cargo": {
-                "args": [
-                    "build",
-                    "--bin=rust_first_product",
-                    "--package=rust_first_product"
-                ],
-                "filter": {
-                    "name": "rust_first_product",
-                    "kind": "bin"
-                }
-            },
-            "args": [],
-            "cwd": "${workspaceFolder}"
-        },
-        {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Debug unit tests in executable 'rust_first_product'",
-            "cargo": {
-                "args": [
-                    "test",
-                    "--no-run",
-                    "--bin=rust_first_product",
-                    "--package=rust_first_product"
-                ],
-                "filter": {
-                    "name": "RustFirstProduct",
-                    "kind": "bin"
-                }
-            },
+            "name": "Debug",
+            "program": "${workspaceFolder}/target/debug/rust_first_product",
             "args": [],
             "cwd": "${workspaceFolder}"
         }
